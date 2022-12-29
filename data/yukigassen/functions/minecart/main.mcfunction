@@ -1,8 +1,8 @@
 
 # IDから対応するソリを特定
-    scoreboard players operation $temporary_player_id PlayerId = @s PlayerId
-    execute as @e[type=goat] if score @s PlayerId = $temporary_player_id PlayerId run tag @s add Target
-    execute as @e[type=minecart] if score @s PlayerId = $temporary_player_id PlayerId run tag @s add Target
+    scoreboard players operation $temporary_player_id SvPlayerId = @s SvPlayerId
+    execute as @e[type=goat] if score @s SvPlayerId = $temporary_player_id SvPlayerId run tag @s add Target
+    execute as @e[type=minecart] if score @s SvPlayerId = $temporary_player_id SvPlayerId run tag @s add Target
 
 # トロッコが破壊されたとき（実行しない）
     # execute if entity @s[tag=Rided] unless entity @e[type=minecart,tag=Target] run function yukigassen:minecart/kill
@@ -21,5 +21,5 @@
 
 # 終了
     kill @e[type=marker,tag=Motion]
-    scoreboard players reset $temporary_player_id PlayerId
+    scoreboard players reset $temporary_player_id SvPlayerId
     tag @e[tag=Target] remove Target

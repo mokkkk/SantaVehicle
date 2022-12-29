@@ -12,8 +12,8 @@
     scoreboard objectives add SvFuncCount dummy
 
 # プレイヤーID割り当て
-    execute as @a unless entity @s[scores={PlayerId=0..}] run function yukigassen:load_id
+    execute as @a unless entity @s[scores={SvPlayerId=0..}] run function yukigassen:load_id
 
 # 初回通知
-    execute unless score $santa_vehicle_flag SvPlayerId matches 1 run tellraw @a {"text": "【サンタさんの乗り物 インストール完了】"}
+    execute unless score $santa_vehicle_flag SvPlayerId matches 1 run tellraw @a {"text": "【SantaVehicle インストール完了】"}
     execute unless score $santa_vehicle_flag SvPlayerId matches 1 run scoreboard players set $santa_vehicle_flag SvPlayerId 1

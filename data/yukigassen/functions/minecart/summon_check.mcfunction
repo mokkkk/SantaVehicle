@@ -5,4 +5,4 @@
     data remove storage santa_vehicle: Temp.Mainhand
 
 # 終了
-    scoreboard players set @s UsedCoas 0
+    scoreboard players set @s SvUsedCoas 0
